@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "nombre": "Card title",
+        "descripcion": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "precio": 480,
+        "descuento": 30,
+        "imagen": "reloj1.jpg"
+    }, 
+    {
+        "id": 2,
+        "nombre": "Card title",
+        "descripcion": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "precio": 320,
+        "descuento": 0,
+        "imagen": "reloj2.jpg"
+    }, 
+    {
+        "id": 3,
+        "nombre": "Card title",
+        "descripcion": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "precio": 540,
+        "descuento": 15,
+        "imagen": "reloj3.jpg"
+    }, 
+    {
+        "id": 4,
+        "nombre": "Card title",
+        "descripcion": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "precio": 456,
+        "descuento": 0,
+        "imagen": "reloj4.jpg"
+    }, 
+    {
+        "id": 5,
+        "nombre": "Card title",
+        "descripcion": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "precio": 560,
+        "descuento": 15,
+        "imagen": "reloj5.jpg"
+    }, 
+    {
+        "id": 6,
+        "nombre": "Card title",
+        "descripcion": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "precio": 700,
+        "descuento": 0,
+        "imagen": "reloj6.jpg"
+    }, 
+    {
+        "id": 7,
+        "nombre": "Card title",
+        "descripcion": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "precio": 900,
+        "descuento": 15,
+        "imagen": "reloj7.jpg"
+    }, 
+    {
+        "id": 8,
+        "nombre": "Card title",
+        "descripcion": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "precio": 1200,
+        "descuento": 30,
+        "imagen": "reloj8.jpg"
+    } 
+]

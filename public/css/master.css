@@ -1,0 +1,66 @@
+.navbar-brand{
+    margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+}
+.img-fluid{
+    size: 100%;
+}
+.container-fluid{
+    margin: 0 auto;
+    padding: 0;
+    margin: 0;
+}
+
+.misH1{
+    text-align: center;
+    color: red;
+    font-size: 2rem;
+}
+
+
+article img{
+    width: 100%;
+    opacity: 1;
+}
+
+.img-box img:hover{
+    opacity: 0.8;
+}
+p{
+    text-align: justify;
+}
+
+
+.descuento{
+    right: 15px;
+    top: 20px;
+    position: absolute;
+    width: 20%;
+}
+
+body{
+    background-color: #20063b;
+}
+h2{
+    color: white;
+}
+h4{
+    color: white;
+}
+p{
+    color: white;
+}
+.lead{
+    color: black;
+}
+label{
+    color: white;
+}
+section{
+    color: #20063b;
+}
