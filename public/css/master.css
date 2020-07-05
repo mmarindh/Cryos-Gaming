@@ -64,3 +64,38 @@ label{
 section{
     color: #20063b;
 }
+.carouselproductos{
+    width: 40vh;
+    margin: auto;
+}
+.item-price{
+    font-size: 15px;
+}
+
+.thumb-content h4{
+    font-size: 20px;
+}
+.col-md-12 h2{
+    font-size:25px ;
+}
+#nose article h1{
+    font-size: 35px;
+}
+@media(min-width: 1024px){
+    .carouselproductos{
+        width: 150vh;
+        
+    }
+    .item-price{
+        font-size: 25px;
+    }
+    .thumb-content h4{
+        font-size: 30px;
+    }
+    .col-md-12 h2{
+        font-size:40px ;
+    }
+    footer{
+        margin-left: 30%;
+    }
+}
