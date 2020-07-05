@@ -4,38 +4,92 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <!-- Bootstrap CSS -->
+      <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="css/mdb.min.css">
     <link rel="stylesheet" href="css/master.css">
     <title>Cryos Gaming</title>
   </head>
   <body>
     <main class="container-fluid">
-      <!--Barra de navegación-->
-      <!--Aqui coloque la clase fixed-top para lograr dejar fijo el encabezado. Es como si realizamos un display: fixed-->
-      <nav class="navbar navbar-expand-lg  navbar-light bg-light fixed-top">
-        <a class="navbar-brand" href="index" id="logo">Cryos Gaming</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse " id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto ">
-            <li class="nav-item active">
-              <a class="nav-link " href="index">Inicio </a>
-            </li>
-          </ul>
-          <ul class="my-2 my-lg-0 navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="login">Login</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="registro">Registro</a>
-            </li>
-          </ul>
-        </div>
-      </nav>  
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-light navbar-light purple-gradient lighten-4">
+  <!-- Navbar brand -->
+  <a class="navbar-brand" href="#">Cryos Gaming</a>
+  <!-- Collapse button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="basicExampleNav">
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Quienes somos</a>
+      </li>
+      <!-- Dropdown -->
+      <li class="nav-item dropdown multi-level-dropdown">
+        <a href="#" id="menu" data-toggle="dropdown" class="nav-link dropdown-toggle w-100">Productos</a>
+        <ul class="dropdown-menu mt-2 rounded-0 purple-gradient border-0 z-depth-1 ">
+          <li class="dropdown-item dropdown-submenu p-0">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle text-black w-100">Alta Gama</a>
+            <ul class="dropdown-menu ml-2 rounded-0 purple-gradient border-0 z-depth-1">
+              <li class="dropdown-item p-0">
+                <a href="#" class="text-black w-100">Striker</a>
+              </li>
+              <li class="dropdown-item p-0">
+                <a href="#" class="text-black w-100">Genesis</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown-item dropdown-submenu">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle text-black w-100">Gama media</a>
+            <ul class="dropdown-menu mr-2 rounded-0  purple-gradient border-0 z-depth-1 r-100 ">
+              <li class="dropdown-item p-0">
+                <a href="#" class="text-black w-100">Neuron</a>
+              </li>
+              <li class="dropdown-item p-0">
+                <a href="#" class="text-black w-100">Millennium</a>
+              </li>
+              <li class="dropdown-item p-0">
+                <a href="#" class="text-black w-100">Aventum</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <!-- Links -->
+    <form class="form-inline">
+      <div class="md-form my-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      </div>
+    </form>
+    <ul class="my-2 my-lg-0 navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="login">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="registro">Registro</a>
+      </li>
+    </ul>
+  </div>
+  <!-- Collapsible content -->
+</nav>
+<!--/.Navbar--> 
     <!--Carousel-->
       <div id="carouselExampleIndicators" class="carousel slide d-none d-lg-block " data-ride="carousel">
         <ol class="carousel-indicators">
@@ -70,12 +124,6 @@
           <div class="col-md-12">
             <h2>Las computadoras <b>mas</b> vendidas</h2>
             <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
-            <!-- Carousel indicators -->
-            <ol class="carousel-indicators">
-              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-              <li data-target="#myCarousel" data-slide-to="1"></li>
-              <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>   
             <!-- Wrapper for carousel items -->
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -88,15 +136,6 @@
                       <div class="thumb-content">
                         <h4>Striker</h4>
                         <p class="item-price"><span>$200.000</span></p>
-                        <div class="star-rating">
-                          <ul class="list-inline">
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                          </ul>
-                        </div>
                         <a href="#" class="btn btn-primary">Add to Cart</a>
                       </div>						
                     </div>
@@ -109,15 +148,6 @@
                       <div class="thumb-content">
                         <h4>Chronos</h4>
                         <p class="item-price"><span>$80.000</span></p>
-                        <div class="star-rating">
-                          <ul class="list-inline">
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                          </ul>
-                        </div>
                         <a href="#" class="btn btn-primary">Add to Cart</a>
                       </div>						
                     </div>
@@ -130,15 +160,6 @@
                       <div class="thumb-content">
                         <h4>Neuron</h4>
                         <p class="item-price"><strike>$90.000</strike> <span>$79.999</span></p>
-                        <div class="star-rating">
-                          <ul class="list-inline">
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star-half-o"></i></li>
-                          </ul>
-                        </div>
                         <a href="#" class="btn btn-primary">Add to Cart</a>
                       </div>						
                     </div>
@@ -151,15 +172,6 @@
                       <div class="thumb-content">
                         <h4>Millennium</h4>
                         <p class="item-price"><span>$75.000</span></p>
-                        <div class="star-rating">
-                          <ul class="list-inline">
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                          </ul>
-                        </div>
                         <a href="#" class="btn btn-primary">Add to Cart</a>
                       </div>						
                     </div>
@@ -176,15 +188,6 @@
                       <div class="thumb-content">
                         <h4>Genesis</h4>
                         <p class="item-price"><span>$125.000</span></p>
-                        <div class="star-rating">
-                          <ul class="list-inline">
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                          </ul>
-                        </div>
                         <a href="#" class="btn btn-primary">Add to Cart</a>
                       </div>						
                     </div>
@@ -197,15 +200,6 @@
                       <div class="thumb-content">
                         <h4>Aventum</h4>
                         <p class="item-price"><span>$90.000</span></p>
-                        <div class="star-rating">
-                          <ul class="list-inline">
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star-half-o"></i></li>
-                          </ul>
-                        </div>
                         <a href="#" class="btn btn-primary">Add to Cart</a>
                       </div>						
                     </div>
@@ -218,15 +212,6 @@
                       <div class="thumb-content">
                         <h4>Velox</h4>
                         <p class="item-price"><span>$65.000</span></p>
-                        <div class="star-rating">
-                          <ul class="list-inline">
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                          </ul>
-                        </div>
                         <a href="#" class="btn btn-primary">Add to Cart</a>
                       </div>						
                     </div>
@@ -239,15 +224,6 @@
                       <div class="thumb-content">
                         <h4>Bolt</h4>
                         <p class="item-price"><strike>$100.000</strike> <span>$87.999</span></p>
-                        <div class="star-rating">
-                          <ul class="list-inline">
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                          </ul>
-                        </div>
                         <a href="#" class="btn btn-primary">Add to Cart</a>
                       </div>						
                     </div>
