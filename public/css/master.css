@@ -99,4 +99,11 @@ section{
     footer{
         margin-left: 30%;
     }
+    #form div input{
+        display: block;
+    }
+    #form div{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
 }

@@ -20,5 +20,6 @@ router.get('/', controllersWeb.index);
 router.get('/nosotros', controllersWeb.nosotros);
 router.get('/contacto', controllersWeb.contacto);
 router.get('/productos', controllersWeb.productos);
+router.get('/nuevoproducto', controllersWeb.nuevoproducto);
 
 module.exports = router;

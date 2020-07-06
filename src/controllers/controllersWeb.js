@@ -15,4 +15,7 @@ module.exports = {
     productos: function (req,res) {
         res.sendFile(path.resolve(__dirname,'..', 'views', 'web', 'productos.html'));
     },
+    nuevoproducto: function (req,res) {
+        res.sendFile(path.resolve(__dirname,'..','views','productos', 'productAdd.html'))
+    }
 }

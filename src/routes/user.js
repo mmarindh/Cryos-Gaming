@@ -8,6 +8,6 @@ const controllersUser = require(path.resolve(__dirname, '..', 'controllers', 'co
 //Armo mis rutas
 router.get('/login', controllersUser.login);
 router.get('/registro', controllersUser.registro);
-
+router.get('/nuevoproducto', controllersUser.nuevoproducto);
 
 module.exports = router;
