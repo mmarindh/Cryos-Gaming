@@ -9,5 +9,5 @@ const controllersUser = require(path.resolve(__dirname, '..', 'controllers', 'co
 router.get('/login', controllersUser.login);
 router.get('/registro', controllersUser.registro);
 router.get('/nuevoproducto', controllersUser.nuevoproducto);
-
+router.get('/carrito', controllersUser.carrito);
 module.exports = router;

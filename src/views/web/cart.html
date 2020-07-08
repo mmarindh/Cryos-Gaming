@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+      <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <link rel="stylesheet" href="css/master.css">
+
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <title>Carrito de Compras</title>
+</head>
+<body >
+    <main class="container-fluid">
+        <!--Navbar-->
+            <nav class="navbar navbar-expand-lg navbar-light navbar-light purple-gradient lighten-4">
+                <!-- Navbar brand -->
+                <a class="navbar-brand" href="/">Cryos Gaming</a>
+                <!-- Collapse button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Collapsible content -->
+                <div class="collapse navbar-collapse" id="basicExampleNav">
+                <!-- Links -->
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                    <a class="nav-link" href="/">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">Quienes somos</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="nuevoproducto">Nuevo Producto</a>
+                    </li>
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown multi-level-dropdown">
+                    <a href="#" id="menu" data-toggle="dropdown" class="nav-link dropdown-toggle w-100">Productos</a>
+                    <ul class="dropdown-menu mt-2 rounded-0 purple-gradient border-0 z-depth-1">
+                        <li class="dropdown-item dropdown-submenu p-0">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle text-black w-100">Alta Gama</a>
+                        <ul class="dropdown-menu ml-2 rounded-0 purple-gradient border-0 z-depth-1">
+                            <li class="dropdown-item p-0">
+                            <a href="#" class="text-black w-100">Striker</a>
+                            </li>
+                            <li class="dropdown-item p-0">
+                            <a href="#" class="text-black w-100">Genesis</a>
+                            </li>
+                        </ul>
+                        </li>
+                        <li class="dropdown-item dropdown-submenu">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle text-black w-100">Gama media</a>
+                        <ul class="dropdown-menu mr-2 rounded-0  purple-gradient border-0 z-depth-1 r-100 ">
+                            <li class="dropdown-item p-0">
+                            <a href="#" class="text-black w-100">Neuron</a>
+                            </li>
+                            <li class="dropdown-item p-0">
+                            <a href="#" class="text-black w-100">Millennium</a>
+                            </li>
+                            <li class="dropdown-item p-0">
+                            <a href="#" class="text-black w-100">Aventum</a>
+                            </li>
+                        </ul>
+                        </li>
+                    </ul>
+                    </li>
+                </ul>
+                <!-- Links -->
+                    <form class="form-inline" style="float: left;">
+                        <div class="md-form my-0">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                        </div>
+                    </form>
+                    <ul class="my-2 my-lg-0 navbar-nav" style="float: left;">
+                        <li class="nav-item">
+                        <a class="nav-link" href="login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="registro">Registro</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Collapsible content -->
+            </nav>
+        <!--/.Navbar--> 
+        <!--carrito-->
+<!--Section: Block Content-->
+<section id="carrito">
+
+    <!--Grid row-->
+    <div class="row">
+  
+      <!--Grid column-->
+      <div class="col-lg-8">
+  
+        <!-- Card -->
+        <div class="card wish-list mb-3">
+          <div class="card-body">
+  
+            <h5 class="mb-4">Tu carrito (<span>2</span> items)</h5>
+  
+            <div class="row mb-4">
+              <div class="col-md-5 col-lg-3 col-xl-3">
+                <div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0">
+                  <img class="img-fluid w-100"
+                    src="img/compu5.jpg" alt="Sample">
+                  <a href="#!">
+                    <div class="mask waves-effect waves-light">
+                      <img class="img-fluid w-100"
+                        src="img/compu5.jpg">
+                      <div class="mask rgba-black-slight waves-effect waves-light"></div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-7 col-lg-9 col-xl-9">
+                <div>
+                  <div class="d-flex justify-content-between">
+                    <div>
+                      <h5>Genesis</h5>
+                      <p class="mb-3 text-muted text-uppercase small">Gama alta</p>
+                      <p class="mb-2 text-muted text-uppercase small">Rtx 2080</p>
+
+                    </div>
+                    <div>
+                        <div class="def-number-input number-input safari_only mb-0 w-100">
+                          <input class="quantity" min="0" name="quantity" value="1" type="number">
+                        </div>
+                      </div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                      <a href="#!" type="button" class="card-link-secondary small text-uppercase mr-3"><i
+                          class="fas fa-trash-alt mr-1"></i> Eliminar </a>
+                      <a href="#!" type="button" class="card-link-secondary small text-uppercase"><i
+                          class="fas fa-heart mr-1"></i> Mover a la lista de deseados </a>
+                    </div>
+                    <p class="mb-0"><span><strong>$125.000</strong></span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="mb-4">
+            <div class="row mb-4">
+              <div class="col-md-5 col-lg-3 col-xl-3">
+                <div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0">
+                  <img class="img-fluid w-100"
+                    src="img/compu6.jpg" alt="Sample">
+                  <a href="#!">
+                    <div class="mask waves-effect waves-light">
+                      <img class="img-fluid w-100"
+                        src="img/compu6.jpg">
+                      <div class="mask rgba-black-slight waves-effect waves-light"></div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-7 col-lg-9 col-xl-9">
+                <div>
+                  <div class="d-flex justify-content-between">
+                    <div>
+                      <h5>Aventum</h5>
+                      <p class="mb-3 text-muted text-uppercase small">Gama media</p>
+                      <p class="mb-2 text-muted text-uppercase small">rx 580</p>
+                    </div>
+                    <div>
+                      <div class="def-number-input number-input safari_only mb-0 w-100">
+                        <input class="quantity" min="0" name="quantity" value="1" type="number">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                      <a href="#!" type="button" class="card-link-secondary small text-uppercase mr-3"><i
+                          class="fas fa-trash-alt mr-1"></i> Eliminar </a>
+                      <a href="#!" type="button" class="card-link-secondary small text-uppercase"><i
+                          class="fas fa-heart mr-1"></i> Mover a la lista de deseados </a>
+                    </div>
+                    <p class="mb-0"><span><strong>$90.000</strong></span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="text-primary mb-0"><i class="fas fa-info-circle mr-1"></i> Stock limitado, añadir elementos al carrito no significa que sea reservado</p>
+  
+          </div>
+        </div>
+        <!-- Card -->
+  
+        <!-- Card -->
+        <div class="card mb-3">
+          <div class="card-body">
+  
+            <h5 class="mb-4">Envio aproximado</h5>
+  
+            <p class="mb-0"> 3 a 4 semanas</p>
+          </div>
+        </div>
+        <!-- Card -->
+  
+        <!-- Card -->
+        <div class="card mb-3">
+          <div class="card-body">
+  
+            <h5 class="mb-4">Aceptamos</h5>
+  
+            <img class="mr-2" width="45px"
+              src="https://mdbootstrap.com/wp-content/plugins/woocommerce-gateway-stripe/assets/images/visa.svg"
+              alt="Visa">
+            <img class="mr-2" width="45px"
+              src="https://mdbootstrap.com/wp-content/plugins/woocommerce-gateway-stripe/assets/images/amex.svg"
+              alt="American Express">
+            <img class="mr-2" width="45px"
+              src="https://mdbootstrap.com/wp-content/plugins/woocommerce-gateway-stripe/assets/images/mastercard.svg"
+              alt="Mastercard">
+            <img class="mr-2" width="45px"
+              src="https://z9t4u9f6.stackpathcdn.com/wp-content/plugins/woocommerce/includes/gateways/paypal/assets/images/paypal.png"
+              alt="PayPal acceptance mark">
+          </div>
+        </div>
+        <!-- Card -->
+  
+      </div>
+      <!--Grid column-->
+  
+      <!--Grid column-->
+      <div class="col-lg-4">
+  
+        <!-- Card -->
+        <div class="card mb-3">
+          <div class="card-body">
+  
+            <h5 class="mb-3">Total</h5>
+  
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+                Genesis
+                <span>$125.000</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+                Aventum
+                <span>$90.000</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                Envio
+                <span>Gratis</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+                <div>
+                  <strong>Total</strong>
+                  <strong>
+                    <p class="mb-0">(Incluyendo IVA)</p>
+                  </strong>
+                </div>
+                <span><strong>$220.000</strong></span>
+              </li>
+            </ul>
+  
+            <button type="button" class="btn btn-primary btn-block waves-effect waves-light">ir a pagar</button>
+  
+          </div>
+        </div>
+        <!-- Card -->
+  
+
+  
+      </div>
+      <!--Grid column-->
+  
+    </div>
+    <!--Grid row-->
+  
+  </section>
+  <!--Section: Block Content-->
+        <!--/carrito-->
+</main>
+
+</body>
+</html>

@@ -81,7 +81,12 @@ section{
 #nose article h1{
     font-size: 35px;
 }
-
+#carrito{
+    margin-top: 15px;
+}
+#carrito p{
+    color: black;
+}
 @media(min-width: 1024px){
     .carouselproductos{
         width: 150vh;

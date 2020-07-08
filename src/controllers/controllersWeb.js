@@ -17,5 +17,8 @@ module.exports = {
     },
     nuevoproducto: function (req,res) {
         res.sendFile(path.resolve(__dirname,'..','views','productos', 'productAdd.html'))
+    },
+    carrito: function (req,res) {
+        res.sendFile(path.resolve(__dirname,'..','views','web', 'cart.html'))
     }
 }
