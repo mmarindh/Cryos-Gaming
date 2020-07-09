@@ -10,4 +10,5 @@ router.get('/login', controllersUser.login);
 router.get('/registro', controllersUser.registro);
 router.get('/nuevoproducto', controllersUser.nuevoproducto);
 router.get('/carrito', controllersUser.carrito);
+router.get('/producto', controllersUser.producto);
 module.exports = router;

@@ -64,6 +64,61 @@ label{
 section{
     color: #20063b;
 }
+h4.carritoh4{
+color: black;
+font-weight: bold;
+    
+    
+    
+}
+p.precio{
+    color: #000000;
+    line-height: 4px;
+    font-weight: bold;
+        
+       
+}
+div.compras{
+    padding: 15px;
+       
+        
+}
+span.precioEnDescuento{
+     font-size: x-large;
+    line-height: 8px;
+    font-weight: bold;
+        
+}
+img.carrito{
+       
+    width: 500px;
+    height: 500px;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+strike.precio{
+    font-weight: bold;
+    font-size: initial;
+        
+}
+    
+    
+    
+a.botonera{
+    float: right;
+}
+    
+    
+    
+#listado  {
+    color:black;
+    size: 16px;}
+    
+#carousel h4{color: black;}
+#carousel span{color: black;}
+#carousel p{color: black;}
+#carritoCompra p{text-align: center;}
 .carouselproductos{
     width: 40vh;
     margin: auto;
@@ -87,11 +142,18 @@ section{
 #carrito p{
     color: black;
 }
+#terminos{
+    color: black;
+}
+main{
+    min-height: calc(100vh - 40px);
+}
 @media(min-width: 1024px){
     .carouselproductos{
         width: 150vh;
         
     }
+
     .item-price{
         font-size: 25px;
     }
@@ -101,9 +163,7 @@ section{
     .col-md-12 h2{
         font-size:40px ;
     }
-    footer{
-        margin-left: 30%;
-    }
+
     #form div input{
         display: block;
     }

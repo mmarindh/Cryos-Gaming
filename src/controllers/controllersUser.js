@@ -16,5 +16,8 @@ module.exports = {
     },
     carrito: function (req,res) {
         res.sendFile(path.resolve(__dirname,'..','views','web', 'cart.html'))
-    }
+    },
+    producto: function (req,res) {
+        res.sendFile(path.resolve(__dirname,'..','views','productos', 'product.html'))
+    },
 }

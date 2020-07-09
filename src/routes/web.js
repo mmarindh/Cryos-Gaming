@@ -22,4 +22,5 @@ router.get('/contacto', controllersWeb.contacto);
 router.get('/productos', controllersWeb.productos);
 router.get('/nuevoproducto', controllersWeb.nuevoproducto);
 router.get('/carrito', controllersWeb.carrito);
+router.get('/producto', controllersWeb.producto);
 module.exports = router;
