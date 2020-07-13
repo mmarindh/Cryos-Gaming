@@ -81,5 +81,8 @@ __CryosGaming Logo__
 
 https://github.com/F3l1P3-F4/Cryos-Gaming.git
 
++ ##___Trello___
+ 
+https://trello.com/b/3xowQDk2/cryos-gaming
 
 # ***Gracias por leer hasta acá***
