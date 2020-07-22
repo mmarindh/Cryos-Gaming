@@ -1,101 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-
-    <!-- Diseño de material -->
-    <link rel="stylesheet" href="css/mdb.min.css">
-    <link rel="stylesheet" href="css/master.css">
-
-    <title>Carrito</title>
-
-
-</head>
+  <%- include('../partials/head') %>
 
 <body>
 
     <main class="container-fluid">   
-        <!--Navbar-->
-<nav class="navbar navbar-expand-lg navbar-light navbar-light purple-gradient lighten-4">
-  <!-- Navbar brand -->
-  <a class="navbar-brand" href="/">Cryos Gaming</a>
-  <!-- Collapse button -->
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <!-- Collapsible content -->
-  <div class="collapse navbar-collapse" id="basicExampleNav">
-    <!-- Links -->
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="/">Home
-          <span class="sr-only">(current)</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Quienes somos</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="nuevoproducto">Nuevo Producto</a>
-      </li>
-      <!-- Dropdown -->
-      <li class="nav-item dropdown multi-level-dropdown">
-        <a href="#" id="menu" data-toggle="dropdown" class="nav-link dropdown-toggle w-100">Productos</a>
-        <ul class="dropdown-menu mt-2 rounded-0 purple-gradient border-0 z-depth-1 ">
-          <li class="dropdown-item dropdown-submenu p-0">
-            <a href="#" data-toggle="dropdown" class="dropdown-toggle text-black w-100">Alta Gama</a>
-            <ul class="dropdown-menu ml-2 rounded-0 purple-gradient border-0 z-depth-1">
-              <li class="dropdown-item p-0">
-                <a href="/producto" class="text-black w-100">Striker</a>
-              </li>
-              <li class="dropdown-item p-0">
-                <a href="/producto" class="text-black w-100">Genesis</a>
-              </li>
-            </ul>
-          </li>
-          <li class="dropdown-item dropdown-submenu">
-            <a href="#" data-toggle="dropdown" class="dropdown-toggle text-black w-100">Gama media</a>
-            <ul class="dropdown-menu mr-2 rounded-0  purple-gradient border-0 z-depth-1 r-100 ">
-              <li class="dropdown-item p-0">
-                <a href="/producto" class="text-black w-100">Neuron</a>
-              </li>
-              <li class="dropdown-item p-0">
-                <a href="/producto" class="text-black w-100">Millennium</a>
-              </li>
-              <li class="dropdown-item p-0">
-                <a href="/producto" class="text-black w-100">Aventum</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-    <!-- Links -->
-    <form class="form-inline">
-      <div class="md-form my-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-      </div>
-    </form>
-    <ul class="my-2 my-lg-0 navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="carrito"><i class="fas fa-shopping-cart"></i></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="login">Login</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="registro">Registro</a>
-      </li>
-    </ul>
-  </div>
-  <!-- Collapsible content -->
-</nav>
-<!--/.Navbar--> 
+      <%- include('../partials/navbar') %>
              <!-- Cuerpo principal -->
             <div class="container"> 
              <section class="row">
@@ -300,54 +210,10 @@
             
           </div>
         </div>
+    </main>
+        <%- include('../partials/footer') %>
 </body>
-<!-- Footer -->
-<footer class="page-footer font-small purple-gradient lighten-4 " >
 
-  <!-- Footer Elements -->
-  <div class="container">
-
-    <!-- Grid row-->
-    <div class="row">
-
-      <!-- Grid column -->
-      <div class="col-md-12 ">
-        <div class="mb-5 flex-center" style="margin-left: 50px;">
-
-          <!-- Facebook -->
-          <a class="fb-ic">
-            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-          </a>
-          <!-- Twitter -->
-          <a class="tw-ic">
-            <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-          </a>
-          <!--Linkedin -->
-          <a class="li-ic">
-            <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-          </a>
-          <!--Instagram-->
-          <a class="ins-ic">
-            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-          </a>
-        </div>
-      </div>
-      <!-- Grid column -->
-
-    </div>
-    <!-- Grid row-->
-
-  </div>
-  <!-- Footer Elements -->
-
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="/"> Cryos Gaming</a>
-  </div>
-  <!-- Copyright -->
-
-</footer>
-<!-- Footer -->
               <!-- Optional JavaScript -->
               <!-- jQuery first, then Popper.js, then Bootstrap JS -->
               <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
