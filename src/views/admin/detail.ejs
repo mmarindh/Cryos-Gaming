@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <%- include('../partials/head.ejs') %> 
+  <body>
+    <main class="container-fluid">
+      <%- include('../partials/navBar.ejs') %>   
+      <!--Producto-->
+      <section class="row bg-info">
+            <article class="col-12 col-md-6 mx-auto mt-5">
+                <figure >
+                  <img  src="/img/compus/<%= productos.image%>" class="card-img-top w-100 d-block" alt="Compu">
+                </figure> 
+                <div class="card-body">
+                  <h5 class="card-title"><%= productos.name%></h5>
+                  <h5 class="card-title">$ <%= productos.price %></h5>
+                  <p class="card-text"><%= productos.description %></p>
+                  
+                </div>
+                <a href="/administrar" class="btn btn-danger">Volver</a>
+            </article>
+      </section>
+    </main>
+    <%- include('../partials/footer.ejs') %>
+  </body>
+</html>
+

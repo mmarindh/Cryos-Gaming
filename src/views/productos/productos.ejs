@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+  <%- include('../partials/head.ejs') %>    
+<body>
+    <main class="container-fluid">
+      <%- include('../partials/navBar.ejs') %>
+      <!--Listado de nuestros productos-->
+      <section class="row">
+        <article class="col-12">
+          <h2 class="display-4 text-white bg-info text-center pt-5">Lista de Productos</h2>
+        </article>
+        <% for(let i= 0; i < productos.length; i++){ %>
+          <article class="col-12 col-md-6 col-lg-3 card p-2">
+            <figure >
+              <img  src="images/compus/<%= productos[i].imagen%> " class="card-img-top w-100 d-block" alt="Reloj">
+            </figure>
+            <div class="card-body">
+              <h5 class="card-title"><%= productos[i].nombre%></h5>
+              <h5 class="card-title" >$  <%= productos[i].precio%> </h5>
+              <p class="card-text descripcion"><%= productos[i].descripcion%> </p>
+              <a href="#" class="btn btn-primary">Ver detalle</a>
+            </div>
+          </article>
+        <% } %>
+
+      </section>
+      <%- include('../partials/footer.ejs') %>
+    </main>
+  </body>
+</html>

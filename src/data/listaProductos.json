@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Striker",
+    "description": "convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque",
+    "price": 200,
+    "image": "compu1.png",
+    "color": "Black",
+    "stock": 27,
+    "processor": "AMD"
+  },
+  {
+    "id": 2,
+    "name": "Chronos",
+    "description": "placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id",
+    "price": 80,
+    "image": "compu2.png",
+    "color": "White",
+    "stock": 31,
+    "processor": "Intel"
+  },
+  {
+    "id": 3,
+    "name": "Neuron",
+    "description": "vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo",
+    "price": 90,
+    "image": "compu3.png",
+    "color": "Blue",
+    "stock": 19,
+    "processor": "Intel"
+  },
+  {
+    "id": 4,
+    "name": "Millennium",
+    "description": "odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit",
+    "price": 75,
+    "image": "compu4.png",
+    "color": "Blue",
+    "stock": 15,
+    "processor": "AMD"
+  },
+  {
+    "id": 6,
+    "name": "Aventum",
+    "description": "bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est",
+    "price": 90,
+    "image": "compu6.png",
+    "color": "Pink",
+    "stock": 20,
+    "processor": "AMD"
+  },
+  {
+    "id": 7,
+    "name": "Velox",
+    "description": "vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est",
+    "price": 65,
+    "image": "compu7.png",
+    "color": "Crimson",
+    "stock": 30,
+    "processor": "Intel"
+  },
+  {
+    "id": 8,
+    "name": "Mike",
+    "description": "mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci",
+    "price": 18451,
+    "image": "compu5.png",
+    "color": "Red",
+    "stock": 16,
+    "processor": "Intel"
+  }
+]

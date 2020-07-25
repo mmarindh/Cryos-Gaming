@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+  <%- include('../partials/head') %>
+  <body>
+    <div class="container-fluid">
+      <%- include('../partials/navBar') %>  
+
+        <!-- Cuerpo principal -->
+        <section class="row">
+          <article class="col-12  card pt-5" >
+                  <div class="card-body">
+                    <h1 class="card-title text-center">Actualizar un Producto</h1>
+                  </div>
+          </article>
+      </section>
+
+        <section class="bg-home pt-4">
+            <div class="container">
+                <div class="row" >
+                    <div class="col-8 mx-auto bg-light ">
+                        <div class="create-form">
+                            <form action="/administrar/edit/<%= productEditar.id%>?_method=PUT
+                            " method="POST" enctype="multipart/form-data" >
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="name" placeholder="Nombre de el Equipo" required="required" value="<%= productEditar.name%>">
+                                </div>	
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="description" placeholder="Descripción del Equipo" required="required" value="<%= productEditar.description%>">
+                                </div>
+                                <div class="form-group">
+                                    <input type="number" class="form-control" name="price" placeholder="Indique el precio" required="required" value="<%= productEditar.price%>">
+                                </div>
+                                <!--Aquí solicito la imagen-->
+                                <div class="custom-file">
+                                    <figure class="form-group">
+                                        <img  class="w-100" src="/img/compus/<%= productEditar.image%>" alt="Compu <%= productEditar.name%>">
+                                    </figure>
+                                    <input type="hidden"  name="oldimage"  value="<%= productEditar.image%>">
+                                    <!--De esta forma logro conservar y que viaje la imagen anterior de esta forma evito que el usuario seleccione una imagen nuevamente, ( si no lo desea) -->
+                                    <input type="file" name="image" value="<%= productEditar.image%>" >
+                                    <!--<input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" name="imagen" required value=""> 
+
+                                    <label class="custom-file-label" for="inputGroupFile01">Seleccione una imagen...</label>-->
+                                  </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn btn-info">Actualizar</button>
+                                    <a href="/administrar" class="btn btn-danger">Volver</a>
+                                </div>
+                                
+                            </form>
+                    </div>                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <%- include('../partials/footer') %>        
+</body>
+</html>
