@@ -5,8 +5,8 @@
     <main class="container-fluid">
       <%- include('../partials/navBar.ejs') %>   
       <!--Producto-->
-      <section class="row bg-info">
-            <article class="col-12 col-md-6 mx-auto mt-5">
+      <section class="row" style=color:white>
+            <article class="col-12 col-md-6 mx-auto mt-5 ">
                 <figure >
                   <img  src="/img/compus/<%= productos.image%>" class="card-img-top w-100 d-block" alt="Compu">
                 </figure> 
@@ -16,7 +16,8 @@
                   <p class="card-text"><%= productos.description %></p>
                   
                 </div>
-                <a href="/administrar" class="btn btn-danger">Volver</a>
+                <a href="/carrito" class="btn blue w-100 ">Comprar</a>
+                <a href="/administrar" class="btn btn-danger w-100 ">Volver</a>
             </article>
       </section>
     </main>

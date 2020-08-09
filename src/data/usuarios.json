@@ -185,6 +185,22 @@
     "email": "lamanuelito@hotmail.com",
     "password": "pppppp",
     "avatar": "foto-1596555278729.png",
+    "role": 9
+  },
+  {
+    "nombre": "Felipe",
+    "apellido": "facello",
+    "email": "dasda@hotmail.com",
+    "password": "$2a$10$Ytz8nRE1X7uQsXUREAd2meIcnpB.m5O2qYMUldjAduqAR0NW4Nc1q",
+    "avatar": "foto-1596906749202.PNG",
+    "role": 9
+  },
+  {
+    "nombre": "pepe",
+    "apellido": "pepe",
+    "email": "pepe@pepe.com",
+    "password": "$2a$10$dMhmJssXYnXezdM1qSUsRuMcutpSvtUyk3IantLbe/hJdgfs4nM6O",
+    "avatar": "foto-1596908493385.PNG",
     "role": 1
   }
 ]

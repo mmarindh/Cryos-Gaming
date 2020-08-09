@@ -19,9 +19,7 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Quienes somos</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/administrar">Administrar</a>
-        </li>
+        
         <!-- Dropdown -->
         <li class="nav-item dropdown multi-level-dropdown">
           <a href="#" id="menu" data-toggle="dropdown" class="nav-link dropdown-toggle w-100">Productos</a>
@@ -61,15 +59,49 @@
         </div>
       </form>
       <ul class="my-2 my-lg-0 navbar-nav">
+         <% if(usuario.role == 9) {%>
+         
+         <li class="nav-item">
+          <a class="nav-link" href="/administrar"><ion-icon name="folder-open"></ion-icon></a>
+        </li>
+
         <li class="nav-item">
-          <a class="nav-link" href="carrito"><i class="fas fa-shopping-cart"></i></a>
+          <a class="nav-link" href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/logout"><ion-icon name="person-remove"></ion-icon>
+</a>
+        </li> 
+
+        <li class="nav-item">
+          <img src="/images/usuarios/<%=usuario.avatar %>" 
+        width='40' style= 'border-radius: 40px;'class="img-rounded" alt="">
+        </li>
+        
+      <% } else if (usuario.role == 1){ %>
+        <li class="nav-item">
+          <a class="nav-link" href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/logout"><ion-icon name="person-remove"></ion-icon>
+</a>
+        </li> 
+        <li class="nav-item">
+          <img src="/images/usuarios/<%=usuario.avatar %>" 
+        width='40' style= 'border-radius: 40px;'class="img-rounded" alt="">
+        </li>
+       
+      <% } else { %> 
+     
+      <li class="nav-item">
+          <a class="nav-link" href="/login">Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="login">Login</a>
+          <a class="nav-link" href="/registro">Registro</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="registro">Registro</a>
-        </li>
+        <% } %>
       </ul>
     </div>
     <!-- Collapsible content -->
