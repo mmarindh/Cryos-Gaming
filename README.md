@@ -84,6 +84,6 @@ __CryosGaming Logo__
 + ## [__Trello__](https://trello.com/b/3xowQDk2/cryos-gaming)
  
 
-+ ## [__dbdesigner__](https://app.dbdesigner.id/?action=open&uuid=a526c197-745e-4f64-80a0-dc68a225f67f)
++ ## [__Dbdesigner__](https://app.dbdesigner.id/?action=open&uuid=a526c197-745e-4f64-80a0-dc68a225f67f)
 
 # ***Gracias por leer hasta acá***
