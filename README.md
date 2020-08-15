@@ -77,13 +77,13 @@ __CryosGaming Logo__
         4. ![#009fb7](https://via.placeholder.com/15/009fb7/000000?text=+) `#009fb7`
         5. ![#20063b](https://via.placeholder.com/15/20063b/000000?text=+) `#20063b`
 
-[__Git Hub__](https://github.com/F3l1P3-F4/Cryos-Gaming.git)
++ ## [__Git Hub__](https://github.com/F3l1P3-F4/Cryos-Gaming.git)
 
 
 
-[__Trello__](https://trello.com/b/3xowQDk2/cryos-gaming)
++ ## [__Trello__](https://trello.com/b/3xowQDk2/cryos-gaming)
  
 
-[__dbdesigner__](https://app.dbdesigner.id/?action=open&uuid=a526c197-745e-4f64-80a0-dc68a225f67f)
++ ## [__dbdesigner__](https://app.dbdesigner.id/?action=open&uuid=a526c197-745e-4f64-80a0-dc68a225f67f)
 
 # ***Gracias por leer hasta acá***
