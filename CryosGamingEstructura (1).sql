@@ -1,21 +1,21 @@
-CREATE TABLE IF NOT EXISTS `Rols` (
+CREATE TABLE IF NOT EXISTS `rols` (
    `id` INT AUTO_INCREMENT,
-   `label` VARCHAR NOT NULL,
+   `label` VARCHAR(100) NOT NULL,
    `createdAt` TIMESTAMP,
    `updatedAt` TIMESTAMP,
    `deletedAt` TIMESTAMP,
    PRIMARY KEY (`id`)
 );
 
-CREATE TABLE IF NOT EXISTS `Users` (
+CREATE TABLE IF NOT EXISTS `users` (
    `id` INT AUTO_INCREMENT,
-   `firts_name` VARCHAR NOT NULL,
-   `last_name` VARCHAR NOT NULL,
-   `username` VARCHAR NOT NULL,
-   `email` VARCHAR NOT NULL,
-   `password` VARCHAR NOT NULL,
-   `avatar` VARCHAR NOT NULL DEFAULT 'default.png',
-   `biography` VARCHAR,
+   `firts_name` VARCHAR(100) NOT NULL,
+   `last_name` VARCHAR(100) NOT NULL,
+   `username` VARCHAR(100) NOT NULL,
+   `email` VARCHAR(100) NOT NULL,
+   `password` VARCHAR(100) NOT NULL,
+   `avatar` VARCHAR(100) NOT NULL DEFAULT 'default.png',
+   `biography` VARCHAR(100),
    `rol_id` INT NOT NULL DEFAULT '1',
    `createdAt` TIMESTAMP,
    `updatedAt` TIMESTAMP,
@@ -25,12 +25,12 @@ CREATE TABLE IF NOT EXISTS `Users` (
    UNIQUE KEY unique_avatar (avatar)
 );
 
-CREATE TABLE IF NOT EXISTS `Products` (
+CREATE TABLE IF NOT EXISTS `products` (
    `id` INT AUTO_INCREMENT,
-   `name` VARCHAR NOT NULL,
+   `name` VARCHAR(100) NOT NULL,
    `price` INT NOT NULL,
    `description` INT NOT NULL,
-   `image` VARCHAR NOT NULL DEFAULT 'default.png',
+   `image` VARCHAR(100) NOT NULL DEFAULT 'default.png',
    `stock` INT NOT NULL,
    `brand_id` INT NOT NULL,
    `category_id` INT NOT NULL,
@@ -40,9 +40,9 @@ CREATE TABLE IF NOT EXISTS `Products` (
    PRIMARY KEY (`id`)
 );
 
-CREATE TABLE IF NOT EXISTS `Images` (
+CREATE TABLE IF NOT EXISTS `images` (
    `id` INT AUTO_INCREMENT,
-   `filename` VARCHAR() NOT NULL,
+   `filename` VARCHAR(100) NOT NULL,
    `createdAt` TIMESTAMP,
    `updatedAt` TIMESTAMP,
    `deletedAt` TIMESTAMP,
@@ -59,19 +59,19 @@ CREATE TABLE IF NOT EXISTS `imageProduct` (
    PRIMARY KEY (`id`)
 );
 
-CREATE TABLE IF NOT EXISTS `ProcessorBrands` (
+CREATE TABLE IF NOT EXISTS `processorBrands` (
    `id` INT AUTO_INCREMENT,
-   `name` VARCHAR NOT NULL,
+   `name` VARCHAR(100) NOT NULL,
    `createdAt` TIMESTAMP,
    `updatedAt` TIMESTAMP,
    `deletedAt` TIMESTAMP,
    PRIMARY KEY (`id`)
 );
 
-CREATE TABLE IF NOT EXISTS `Attributes` (
+CREATE TABLE IF NOT EXISTS `attributes` (
    `id` INT AUTO_INCREMENT,
-   `name` VARCHAR NOT NULL,
-   `description` VARCHAR NOT NULL,
+   `name` VARCHAR(100) NOT NULL,
+   `description` VARCHAR(100) NOT NULL,
    `createdAt` TIMESTAMP,
    `upadtedAt` TIMESTAMP,
    `deletedAt` TIMESTAMP,
@@ -102,9 +102,9 @@ CREATE TABLE IF NOT EXISTS `cartProduct` (
    PRIMARY KEY (`id`)
 );
 
-CREATE TABLE IF NOT EXISTS `Tokens` (
+CREATE TABLE IF NOT EXISTS `tokens` (
    `id` INT AUTO_INCREMENT,
-   `token` VARCHAR NOT NULL,
+   `token` VARCHAR(100) NOT NULL,
    `user_id` INT NOT NULL,
    `updatedAt` TIMESTAMP,
    `createdAt` TIMESTAMP,
@@ -112,16 +112,16 @@ CREATE TABLE IF NOT EXISTS `Tokens` (
    PRIMARY KEY (`id`)
 );
 
-CREATE TABLE IF NOT EXISTS `States` (
+CREATE TABLE IF NOT EXISTS `states` (
    `id` INT AUTO_INCREMENT,
-   `state` VARCHAR NOT NULL,
+   `state` VARCHAR(100) NOT NULL,
    `createdAt` TIMESTAMP,
    `updatedAt` TIMESTAMP,
    `deletedAt` TIMESTAMP,
    PRIMARY KEY (`id`)
 );
 
-CREATE TABLE IF NOT EXISTS `Carts` (
+CREATE TABLE IF NOT EXISTS `carts` (
    `id` INT AUTO_INCREMENT,
    `total` INT NOT NULL,
    `user_id` INT NOT NULL,
@@ -131,7 +131,7 @@ CREATE TABLE IF NOT EXISTS `Carts` (
    PRIMARY KEY (`id`)
 );
 
-CREATE TABLE IF NOT EXISTS `Orders` (
+CREATE TABLE IF NOT EXISTS `orders` (
    `id` INT AUTO_INCREMENT,
    `cart_id` INT,
    `payment_id` INT,
@@ -144,25 +144,25 @@ CREATE TABLE IF NOT EXISTS `Orders` (
 
 CREATE TABLE IF NOT EXISTS `paymenMethods` (
    `id` INT AUTO_INCREMENT,
-   `method` VARCHAR NOT NULL,
+   `method` VARCHAR(100) NOT NULL,
    `createdAt` TIMESTAMP,
    `updatedAt` TIMESTAMP,
    `deletedAt` TIMESTAMP,
    PRIMARY KEY (`id`)
 );
 
-CREATE TABLE IF NOT EXISTS `Shipments` (
+CREATE TABLE IF NOT EXISTS `shipments` (
    `id` INT AUTO_INCREMENT,
-   `address_id` VARCHAR NOT NULL,
+   `address_id` VARCHAR(100) NOT NULL,
    `createdAt` TIMESTAMP,
    `updaedAt` TIMESTAMP,
    `deletedAt` TIMESTAMP,
    PRIMARY KEY (`id`)
 );
 
-CREATE TABLE IF NOT EXISTS `Addresses` (
+CREATE TABLE IF NOT EXISTS `addresses` (
    `id` INT AUTO_INCREMENT,
-   `street` VARCHAR NOT NULL,
+   `street` VARCHAR(100) NOT NULL,
    `number` INT NOT NULL,
    PRIMARY KEY (`id`)
 );
@@ -174,20 +174,20 @@ CREATE TABLE IF NOT EXISTS `addressUser` (
    PRIMARY KEY (`id`)
 );
 
-ALTER TABLE `Users` ADD CONSTRAINT `Users_fk_0_rol_id` FOREIGN KEY (rol_id) REFERENCES `Rols`(`id`) ;
-ALTER TABLE `Products` ADD CONSTRAINT `Products_fk_0_brand_id` FOREIGN KEY (brand_id) REFERENCES `ProcessorBrands`(`id`) ;
-ALTER TABLE `imageProduct` ADD CONSTRAINT `imageProduct_fk_0_product_id` FOREIGN KEY (product_id) REFERENCES `Products`(`id`) ;
-ALTER TABLE `imageProduct` ADD CONSTRAINT `imageProduct_fk_0_image_id` FOREIGN KEY (image_id) REFERENCES `Images`(`id`) ;
-ALTER TABLE `attributeProduct` ADD CONSTRAINT `attributeProduct_fk_0_product_id` FOREIGN KEY (product_id) REFERENCES `Products`(`id`) ;
-ALTER TABLE `attributeProduct` ADD CONSTRAINT `attributeProduct_fk_0_attribute_id` FOREIGN KEY (attribute_id) REFERENCES `Attributes`(`id`) ;
-ALTER TABLE `cartProduct` ADD CONSTRAINT `cartProduct_fk_0_product_id` FOREIGN KEY (product_id) REFERENCES `Products`(`id`) ;
-ALTER TABLE `cartProduct` ADD CONSTRAINT `cartProduct_fk_0_state_id` FOREIGN KEY (state_id) REFERENCES `States`(`id`) ;
-ALTER TABLE `cartProduct` ADD CONSTRAINT `cartProduct_fk_0_cart_id` FOREIGN KEY (cart_id) REFERENCES `Carts`(`id`) ;
-ALTER TABLE `Tokens` ADD CONSTRAINT `Tokens_fk_0_user_id` FOREIGN KEY (user_id) REFERENCES `Users`(`id`) ;
-ALTER TABLE `Carts` ADD CONSTRAINT `Carts_fk_0_user_id` FOREIGN KEY (user_id) REFERENCES `Users`(`id`) ;
-ALTER TABLE `Orders` ADD CONSTRAINT `Orders_fk_0_cart_id` FOREIGN KEY (cart_id) REFERENCES `Carts`(`id`) ;
-ALTER TABLE `Orders` ADD CONSTRAINT `Orders_fk_0_payment_id` FOREIGN KEY (payment_id) REFERENCES `paymenMethods`(`id`) ;
-ALTER TABLE `Orders` ADD CONSTRAINT `Orders_fk_0_shipment_id` FOREIGN KEY (shipment_id) REFERENCES `Shipments`(`id`) ;
-ALTER TABLE `Shipments` ADD CONSTRAINT `Shipments_fk_0_address_id` FOREIGN KEY (address_id) REFERENCES `Addresses`(`id`) ;
-ALTER TABLE `addressUser` ADD CONSTRAINT `addressUser_fk_0_user_id` FOREIGN KEY (user_id) REFERENCES `Users`(`id`) ;
-ALTER TABLE `addressUser` ADD CONSTRAINT `addressUser_fk_0_address_id` FOREIGN KEY (address_id) REFERENCES `Addresses`(`id`) ;
+ALTER TABLE `users` ADD CONSTRAINT `users_fk_0_rol_id` FOREIGN KEY (rol_id) REFERENCES `rols`(`id`) ;
+ALTER TABLE `products` ADD CONSTRAINT `products_fk_0_brand_id` FOREIGN KEY (brand_id) REFERENCES `processorBrands`(`id`) ;
+ALTER TABLE `imageProduct` ADD CONSTRAINT `imageProduct_fk_0_product_id` FOREIGN KEY (product_id) REFERENCES `products`(`id`) ;
+ALTER TABLE `imageProduct` ADD CONSTRAINT `imageProduct_fk_0_image_id` FOREIGN KEY (image_id) REFERENCES `images`(`id`) ;
+ALTER TABLE `attributeProduct` ADD CONSTRAINT `attributeProduct_fk_0_product_id` FOREIGN KEY (product_id) REFERENCES `products`(`id`) ;
+ALTER TABLE `attributeProduct` ADD CONSTRAINT `attributeProduct_fk_0_attribute_id` FOREIGN KEY (attribute_id) REFERENCES `attributes`(`id`) ;
+ALTER TABLE `cartProduct` ADD CONSTRAINT `cartProduct_fk_0_product_id` FOREIGN KEY (product_id) REFERENCES `products`(`id`) ;
+ALTER TABLE `cartProduct` ADD CONSTRAINT `cartProduct_fk_0_state_id` FOREIGN KEY (state_id) REFERENCES `states`(`id`) ;
+ALTER TABLE `cartProduct` ADD CONSTRAINT `cartProduct_fk_0_cart_id` FOREIGN KEY (cart_id) REFERENCES `carts`(`id`) ;
+ALTER TABLE `tokens` ADD CONSTRAINT `tokens_fk_0_user_id` FOREIGN KEY (user_id) REFERENCES `users`(`id`) ;
+ALTER TABLE `carts` ADD CONSTRAINT `carts_fk_0_user_id` FOREIGN KEY (user_id) REFERENCES `users`(`id`) ;
+ALTER TABLE `orders` ADD CONSTRAINT `orders_fk_0_cart_id` FOREIGN KEY (cart_id) REFERENCES `carts`(`id`) ;
+ALTER TABLE `orders` ADD CONSTRAINT `orders_fk_0_payment_id` FOREIGN KEY (payment_id) REFERENCES `paymenMethods`(`id`) ;
+ALTER TABLE `orders` ADD CONSTRAINT `orders_fk_0_shipment_id` FOREIGN KEY (shipment_id) REFERENCES `shipments`(`id`) ;
+ALTER TABLE `shipments` ADD CONSTRAINT `shipments_fk_0_address_id` FOREIGN KEY (address_id) REFERENCES `addresses`(`id`) ;
+ALTER TABLE `addressUser` ADD CONSTRAINT `addressUser_fk_0_user_id` FOREIGN KEY (user_id) REFERENCES `users`(`id`) ;
+ALTER TABLE `addressUser` ADD CONSTRAINT `addressUser_fk_0_address_id` FOREIGN KEY (address_id) REFERENCES `addresses`(`id`) ;
