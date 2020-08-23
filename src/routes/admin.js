@@ -25,4 +25,5 @@ router.get('/administrar/delete/:id', controllersAdmin.destroy);
 router.get('/administrar/edit/:id', controllersAdmin.edit);
 router.put('/administrar/edit/:id', controllersAdmin.update);
 
+
 module.exports = router;

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+  <%- include('../partials/head.ejs') %>    
+<body>
+    <main class="container-fluid">
+      <%- include('../partials/navBar.ejs') %>
+      <!--Administrador de productos-->
+
+      <section class="row">
+        <article class="col-12">
+          <h2 class="display-4 text-white bg-info text-center pt-5" >Administrador de usuarios</h2>
+        </article>
+        <article class="col-12" >
+        <table class="table bg-white">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Usuario</th>
+                <th scope="col">Editar</th>
+                <th scope="col">Borrar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% u .forEach( u => { %>
+              <tr>
+                <td><%= user.id%> </td>
+                <td><%= user.firts_name%> </td>
+                <td><a href="/adminUser/editU/<%= user.id%>"> <ion-icon name="pencil-outline"></ion-icon></a></td>
+                <td><a href="/adminUser/delete/<%= user.id%>"><ion-icon name="trash-outline"></ion-icon></a></td>
+              </tr>
+              <% }); %>
+            </tbody>
+          </table> 
+        </article>       
+      </section>
+      
+      <%- include('../partials/footer.ejs') %>
+    </main>
+  </body>
+</html>

@@ -41,7 +41,15 @@ const upload= multer({ storage })
 
 // Métodos en nuestros controladores: index - show - edit - delete - update - logout
 //Aquí disppongo mis rutas
+
+
+
 router.get('/registro', controllersUser.registro);
+router.get('/editarusuario', controllersUser.edit)
+
+
+
+
 //Aqui en esta ruta envio al controlador el avatar del usuario así como las respectivas validaciones
 
 router.post('/registro', upload.single('avatar'),[

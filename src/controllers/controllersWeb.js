@@ -24,4 +24,7 @@ module.exports = {
     producto: function (req,res) {
         res.render(path.resolve(__dirname,'..','views','productos', 'product.ejs'))
     },
+    usuario: function (req,res) {
+        res.render(path.resolve(__dirname,'..','views','admin', 'editUser.ejs'))
+    },
 }

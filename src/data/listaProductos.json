@@ -58,15 +58,5 @@
     "color": "Crimson",
     "stock": 30,
     "processor": "Intel"
-  },
-  {
-    "id": 8,
-    "name": "Mike",
-    "description": "mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci",
-    "price": 18451,
-    "image": "compu5.png",
-    "color": "Red",
-    "stock": 16,
-    "processor": "Intel"
   }
 ]

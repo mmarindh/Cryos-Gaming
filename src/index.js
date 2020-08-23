@@ -48,11 +48,13 @@ const userRoutes = require('./routes/user');
 const productoRoutes = require('./routes/producto');
 const adminRoutes = require('./routes/admin');
 
+
 //Middleware de las rutas de mi proyecto
 app.use(webRoutes);
 app.use(userRoutes);
 app.use(productoRoutes);
 app.use(adminRoutes);
+app.use("/api",require("./routes/api"))
 
 //Levantar servidor
 app.listen(3000, 'localhost', ()=> console.log('Servidor corriendo en el puerto 3000'));
