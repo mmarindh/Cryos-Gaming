@@ -54,9 +54,9 @@ router.get('/editarusuario', controllersUser.edit)
 
 router.post('/registro', upload.single('avatar'),[
     check('first_name').isLength({
-        min: 1
+        min: 2
       }).withMessage('El campo nombre no puede estar vacío'),
-    check('last_name').isLength({min: 1
+    check('last_name').isLength({min: 2
       }).withMessage('El campo apellido no puede estar vacío'),
     check('email').isEmail().withMessage('Agregar un email válido'),
 
@@ -74,10 +74,10 @@ router.post('/registro', upload.single('avatar'),[
     }).withMessage('Usuario ya se encuentra registrado...'),
 
     //Aquí valido el Password   
-    check('password').isLength({min: 6 }).withMessage('La contraseña debe tener un mínimo de 6 caractéres'),
+    check('password').isLength({min: 8 }).withMessage('La contraseña debe tener un mínimo de 8 caractéres'),
     
     //Aquí valido la confimación del password dispuesto por el usuario
-    check('confirm_password').isLength({min: 6 }).withMessage('La confirmación de la contraseña debe tener un mínimo de 6 caractéres'),
+    check('confirm_password').isLength({min: 8 }).withMessage('La confirmación de la contraseña debe tener un mínimo de 8 caractéres'),
 
     //Aquí valido si las contraseñas son iguales o no
     //El ( value ) viene a ser el valor que viaje en el name del del input del campo 

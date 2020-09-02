@@ -7,7 +7,6 @@ const {
   validationResult,
     body
 } = require('express-validator');
-
 // !!!! estoy tratando de armar un modificador de usuario !!!!
 
 //Aquí requiero la Base  de Datos.
