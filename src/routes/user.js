@@ -55,9 +55,9 @@ router.get('/editarusuario', controllersUser.edit)
 router.post('/registro', upload.single('avatar'),[
     check('first_name').isLength({
         min: 2
-      }).withMessage('El campo nombre no puede estar vacío'),
+      }).withMessage('El campo nombre no es válido, recuerde que debe de tener como mínimo 2 carácteres'),
     check('last_name').isLength({min: 2
-      }).withMessage('El campo apellido no puede estar vacío'),
+      }).withMessage('El campo apellido no es válido, recuerde que debe de tener como mínimo 2 carácteres'),
     check('email').isEmail().withMessage('Agregar un email válido'),
 
     //Aquí incoporé otras validaciones, para que las tengan de guía en sus proyectos
@@ -113,7 +113,7 @@ router.post('/login',[
         }
     }
     return false   
-}).withMessage('Usuario no se encuentra registrado...'),
+}).withMessage('El usuario no se encuentra registrado...'),
 check('password').isLength({min: 6 }).withMessage('La contraseña debe tener un mínimo de 6 caractéres'),
 body('password').custom((value, {req}) =>{
   for (let i = 0; i < archivoUsuarios.length; i++) {

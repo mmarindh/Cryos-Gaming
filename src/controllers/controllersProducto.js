@@ -15,7 +15,7 @@ module.exports = {
         const categorias = Attribute.findAll();
         Promise.all([compus,categorias])
         .then(([compus,categorias]) =>{
-            //return res.send(platos)
+         
             res.render(path.resolve(__dirname , '..','views','productos','productos') , {compus,categorias});
         })           
         .catch(error => res.send(error))
