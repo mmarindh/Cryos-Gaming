@@ -36,14 +36,6 @@ module.exports = {
         })
         .catch(error => console.log(error));
         } else {
-        //return res.send(errors);
-
-        //Aquí incoporé el old: req.body  --> Para poder enviar a la vista los datos que el usuario indique y no tienen errores entonces deben persistir lo que coloco el usuario
-
-        //Si desean especificar debajo de cada input el mensaje de error específico, entonces deben enviar a la vista los errores de la siguiente manera: errors: errors.mapped()
-        //Después en la vista para mostrar debajo del input el respectivo error sólo deben hacer lo siguiente:
-      
-
         return res.render(path.resolve(__dirname, '../views/usuarios/registro'), {
           errors: errors.errors,  old: req.body
         });
