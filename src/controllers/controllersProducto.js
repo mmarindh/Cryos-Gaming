@@ -22,7 +22,7 @@ module.exports = {
     },
 
     categorias: (req,res) =>{
-       //return res.send(req.query.categoria);
+
        const categorias = Attribute.findAll();
        const productos = Product.findAll({
            where: {AttributeId : req.query.categoria},
