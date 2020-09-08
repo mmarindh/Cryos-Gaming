@@ -4,10 +4,11 @@
 
 Cryos-Gaming es una distribuidora 
 
-- beneficios y venntajas de Cryos-Gaming ( distribuidora de componentes que trabajan de la mano con otras empresas del mundo tecnologico) 
--  blablalbalbalbal
+- Beneficios y venntajas de Cryos-Gaming ( distribuidora de componentes que trabajan de la mano con otras empresas del mundo tecnologico) 
+- Productos de calidad Premium 
+- Precios accesibles para el mercado
 
-otro cuasitexto
+
 
 ## Publico Objetivo
 
@@ -15,7 +16,7 @@ Existen diversos factores que debemos observar para identificar nuestro cliente 
 
        1.Género: No definido 
        2.Edad: 12 en adelante
-       3.clase social: Toda persona que tenga la posibilidad de adquirir los productos publicados  
+       3.Clase social: Toda persona que tenga la posibilidad de adquirir los productos publicados  
        4.Principales hábitos de consumo: Videojuegos y Profesionales
         
 
@@ -24,7 +25,7 @@ Existen diversos factores que debemos observar para identificar nuestro cliente 
 __Felipe Facello__
     
     Estudiante en formacion que aspira a que el dia de mañana pueda crear todo lo que se proponga, 20 años.
-    Solo sé que no sé nada , principiante en el mundo de la programación.
+    Principiante en el mundo de la programación.
 
 __Manuel Marin__
     
@@ -78,7 +79,6 @@ __CryosGaming Logo__
         5. ![#20063b](https://via.placeholder.com/15/20063b/000000?text=+) `#20063b`
 
 + ## [__Git Hub__](https://github.com/F3l1P3-F4/Cryos-Gaming.git)
-
 
 
 + ## [__Trello__](https://trello.com/b/3xowQDk2/cryos-gaming)
