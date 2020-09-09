@@ -5,23 +5,41 @@
     <main class="container-fluid">
       <%- include('../partials/navBar.ejs') %>   
       <!--Producto-->
-      <section class="row" style=color:white>
-            <article class="col-12 col-md-6 mx-auto mt-5 ">
+      <div class="container"> 
+        <section class="row">
+            <article class="col-12  " >
+
+
+<div  class="container-fluid ">
+<div class="row">
+   <div  class="bg-white">
+       <div class="signup-form">
+           <form action="" method="post">
+             <p></p>
+             </form>
                 <figure >
-                  <img  src="/img/compus/<%= productos.image%>" class="card-img-top w-100 d-block" alt="Compu">
+                 <div align ="center"> <img  src="/img/compus/<%= productos.image%>" class="card-img-top w-50" alt="Compu"></div>
                 </figure> 
                 <div class="card-body">
-                  <h5 class="card-title"><%= productos.name%></h5>
-                  <h5 class="card-title">$ <%= productos.price %></h5>
-                  <p class="card-text"><%= productos.description %></p>
+                  <h4 class="card-title text-left bold " style="color: black; font-weight: bold;" ><%= productos.name%></h4>
+                  
+                  <p class="card-text" style="color: black;"><%= productos.description %></p>
                   
                 </div>
-                <a href="/carrito" class="btn blue w-100 ">Comprar</a>
-                <a href="/administrar" class="btn btn-danger w-100 ">Volver</a>
-            </article>
-      </section>
-    </main>
-    <%- include('../partials/footer.ejs') %>
-  </body>
-</html>
+                <hr style="height:2px;border: width 2px; ;color:gray;background-color:gray">
+                <h5 class="precio text-right text-top" style="font-weight: bold;">$ <%= productos.price %>  </h5>
+                <a href="/administrar" class=" botonera btn btn-secondary btn-sm ml-right">Volver</a>
+                <a href="/carrito" class="botonera btn btn-secondary btn-sm ml-right">Comprar</a></div><br>
+                 <!-- hr style="height:2px;border: width 2px; ;color:gray;background-color:gray"><div id="carousel" class=" carousel-inner " --> 
+<br><br>
 
+
+    <%- include('../partials/footer.ejs') %>
+    
+  </body>
+              <!-- Optional JavaScript -->
+              <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+              <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+              <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+              <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</html>

@@ -57,10 +57,14 @@ module.exports = {
         res.render(path.resolve(__dirname, '..','views','admin','edit'), {productEditar});
     },
     update: (req,res) =>{
+<<<<<<< HEAD
         let compus =  JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','listaProductos.json')));
+=======
+        let compu = JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','listaProductos.json')));
+>>>>>>> 0f796c7242964345405fade23a4139a336480701
         req.body.id = req.params.id;
-        req.body.image = req.file ? req.file.filename : req.body.oldImage;
-        let productosUpdate = compus.map(compu => {
+        req.body.image = req.file.filename ? req.file.filename : req.body.oldImage;
+        let productosUpdate = compu.map(compu => {
             if(compu.id  == req.body.id){
                 return compu = req.body;
             }
@@ -68,7 +72,7 @@ module.exports = {
         });
         let productosActualizar = JSON.stringify(productosUpdate,null,2);
         //Guardar o reemplazar nuestro archivo JSON
-        fs.writeFileSync(path.resolve(__dirname,'..','data','listaProductos.json'), productosActualizar);
+        fs.writeFileSync(path.resolve(__dirname,'..','data','listaProductos.json'), {productosActualizar});
         res.redirect('/administrar');
     }
 
