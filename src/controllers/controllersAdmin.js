@@ -57,6 +57,7 @@ module.exports = {
         res.render(path.resolve(__dirname, '..','views','admin','edit'), {productEditar});
     },
     update: (req,res) =>{
+        let compus =  JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','listaProductos.json')));
         req.body.id = req.params.id;
         req.body.image = req.file ? req.file.filename : req.body.oldImage;
         let productosUpdate = compus.map(compu => {

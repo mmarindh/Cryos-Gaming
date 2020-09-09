@@ -126,7 +126,10 @@ a.botonera{
 .item-price{
     font-size: 15px;
 }
-
+marquee{
+    color: white;
+    font-size: 40px;
+}
 .thumb-content h4{
     font-size: 20px;
 }

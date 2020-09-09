@@ -23,7 +23,7 @@ router.post("/administrar/create", upload.single('image'), controllersAdmin.save
 router.get('/administrar/detail/:id', controllersAdmin.show);
 router.get('/administrar/delete/:id', controllersAdmin.destroy);
 router.get('/administrar/edit/:id', controllersAdmin.edit);
-router.put('/administrar/edit/:id', controllersAdmin.update);
+router.put('/administrar/edit/:id', upload.single('image'), controllersAdmin.update);
 
 
 module.exports = router;

@@ -50,14 +50,12 @@
     "processor": "AMD"
   },
   {
-    "id": 7,
     "name": "Velox",
     "description": "vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est",
-    "price": 65000,
-    "image": "compu7.png",
-    "color": "Crimson",
-    "stock": 30,
-    "processor": "Intel"
+    "price": "65000",
+    "oldimage": "compu7.png",
+    "id": "7",
+    "image": "compu-1599683774354.jpeg"
   },
   {
     "id": 8,

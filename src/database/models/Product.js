@@ -22,17 +22,27 @@ module.exports = (sequelize, dataTypes) => {
     };*/
         
     
-    const Product = sequelize.define(alias, cols)
-    //Aquí creo mi relación entre productos y Categorias (Categories)
-    //Product.associate = function(models) {
-       // Product.belongsTo(
-        //    models.Category,
-        //    {
-        //        as : 'category',
-        //        foreignKey: 'category_Id'
-        //    }
-       // )
-   // };
-
-    return Product
+    const products = sequelize.define(alias, cols)
+    
+    //Aquí creo mi relación entre Platos (Diskes) y Categorias (Categories)
+    products.associate = function(models) {
+        products.belongsTo(
+            models.processorBrands,
+            {
+                as : 'processorbrands',
+                foreignKey: 'processorbrand_id'
+            }
+        )
+        products.belongsToMany(
+            models.images,
+            {
+                as: 'images',
+                through: 'imageproducts',
+                foreignKey: 'product_id',
+                otherKey: 'image_id'
+            }
+        )
+        
+    };
+    return products;
 }
