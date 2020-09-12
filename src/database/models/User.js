@@ -1,17 +1,52 @@
 module.exports = (sequelize, DataTypes) => {
-  const User = sequelize.define('users', {
+  
+  let alias ="User";
+  
+  let cols ={ 
+    id:{
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
+      allowNull: false
+    },
+    firts_name:{
+      type: DataTypes.STRING,
+      allowNull: false
+    }, 
+    last_name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    username: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    email: {
+      type:DataTypes.STRING,
+      unique: true,
+      allowNull: false
+    },
+    password: {
+      type:DataTypes.STRING,
+      allowNull: false
+    },
+    avatar: {
+      type:DataTypes.STRING,
+      unique: true,
+      allowNull: false
+    },
+    rol: {
+      type:DataTypes.INTEGER,
+      allowNull: false
+    },
+    biography: DataTypes.STRING
     
-    firts_name: DataTypes.STRING,
-    last_name: DataTypes.STRING,
-    username: DataTypes.STRING,
-    email: DataTypes.STRING,
-    password: DataTypes.STRING,
-    avatar: DataTypes.STRING,
-    rol_id: DataTypes.INTEGER,
-
-  }, {});
-  User.associate = function(models) {
-    // associations can be defined here
-  };
+  }
+  let config = {
+    tableName: "users"
+  }
+  
+  let User = sequelize.define(alias, cols, config); 
+  
   return User;
-};
+}

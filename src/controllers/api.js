@@ -1,4 +1,4 @@
-const {Product,User,Attribute} = require('../database/models/');
+const {Product,User,Attribute} = require('../database/models');
 module.exports = {
     producto : {
         index : async (req,res) => res.send(await Product.findAll()),

@@ -9,8 +9,9 @@ const {
 } = require('express-validator');
 // !!!! estoy tratando de armar un modificador de usuario !!!!
 
-//Aquí requiero la Base  de Datos.
-const db = require('../database/models/');
+//Aquí requiero la Base  de Datos.+
+const db = require('../database/models');
+const { user } = require('./api');
 //Aquí hago la asociación al módelo correspondiente
 const User = db.User;
 
@@ -18,19 +19,21 @@ module.exports = {
     registro: (req,res) =>{
         res.render(path.resolve(__dirname, '../views/usuarios/registro'));
     },
+
     create: (req, res) => {
       let errors = validationResult(req);
       if (errors.isEmpty()) {
         let user = {
           firts_name: req.body.first_name,
           last_name: req.body.last_name,
+          username: req.body.username,
           email: req.body.email,
           password: bcrypt.hashSync(req.body.password, 10),
-          avatar:  req.file ? req.file.filename : '',
-          rol_id: 1    //Usuario 1 = Basico 2 = analista   9 = Administrador
+          avatar: req.file.filename,
+          rol: 1    //Usuario 1 = Basico 2 = analista   9 = Administrador
         }
-        User
-        .create(user)
+       
+        User.create(user)
         .then((storedUser) => {
             return  res.redirect('/login');
         })
@@ -49,18 +52,15 @@ module.exports = {
       const errors = validationResult(req);
       //return res.send(errors.mapped());
       if(errors.isEmpty() ) {
-        let archivoUsers = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/usuarios.json')));
-        let usuarioLogueado = archivoUsers.find(usuario =>usuario.email == req.body.email)
-        //Borrar de lo que llega del formulario lo que deseen
-       
-        //Por seguridad todo data critico lo pueden borrar
-        delete usuarioLogueado.password;
-
-        //Aquí voy a guardar en session al usuario
-        req.session.usuario = usuarioLogueado;
+        User.findOne({where:{email: req.body.email}})
+        .then (user => {
+          let userALogear = user;
+          userALogear.password = null;
+          req.session.user = userALogear
+        }) 
         if(req.body.recordarme){
           //Crear la cookie de ese usuario
-          res.cookie('email', usuarioLogueado.email,{maxAge: 1000 * 60 * 60 * 24})
+          res.cookie('email', User.findOne.email,{maxAge: 1000 * 60 * 60 * 24})
         }
         res.redirect('/');
       }else{
@@ -76,9 +76,9 @@ module.exports = {
     },
 
     edit: (req,res) =>{
-      let usuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','usuarios.json')));
+      //let usuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','usuarios.json')));
       const userId = req.params.id;
-      let userEditar = usuarios.find(usuarios => usuarios.id == userId);
+      let userEditar = usuarios.find ( User => usuarios.id == userId);
       res.render(path.resolve(__dirname, '..','views','admin','editUser'), {userEditar});
 
 }}

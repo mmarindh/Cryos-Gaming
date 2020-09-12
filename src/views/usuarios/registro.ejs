@@ -27,6 +27,11 @@
                          <%}%>    
                          <div class="signup-form">
                             <form action="/registro" method="post" enctype="multipart/form-data">
+                              <br>
+                              <div class="form-group">
+                                <!--Noten aqui en los input estoy persistiendo los datos si el usuario coloca algunos datos  buenos, pero otros no-->                                  
+                                <input type="text" class="form-control" name="username" placeholder="Usuario" value="<%= typeof old != 'undefined' ? old.username : '' %>">
+                            </div>
                                 <div class="form-group">
                                     <!--Noten aqui en los input estoy persistiendo los datos si el usuario coloca algunos datos  buenos, pero otros no-->                                  
                                     <input type="text" class="form-control" name="first_name" placeholder="Nombre" value="<%= typeof old != 'undefined' ? old.first_name : '' %>">
