@@ -64,7 +64,7 @@
       </form>
       <ul class="my-2 my-lg-0 navbar-nav d-flex flex-row
       ">
-         <% if(usuario.role == 9) {%>
+         <% if(locals.user.role == 9) {%>
          
          <li class="nav-item">
           <a class="nav-link" href="/administrar"><ion-icon name="folder-open"></ion-icon></a>
@@ -80,11 +80,11 @@
         </li> 
 
         <li class="nav-item">
-          <img src="/images/usuarios/<%=usuario.avatar %>" 
+          <img src="/images/usuarios/<%=locals.user.avatar %>" 
         width='40' style= 'border-radius: 40px;'class="img-rounded" alt="">
         </li>
         
-      <% } else if (usuario.role == 1){ %>
+      <% } else if (locals.user.role == 1){ %>
         <li class="nav-item">
           <a class="nav-link" href="/carrito"><i class="fas fa-shopping-cart"></i></a>
         </li>
@@ -94,7 +94,7 @@
 </a>
         </li> 
         <li class="nav-item">
-          <img src="/images/usuarios/<%=usuario.avatar %>" 
+          <img src="/images/usuarios/<%=locals.user.avatar %>" 
         width='40' style= 'border-radius: 40px;'class="img-rounded" alt="">
         </li>
        
