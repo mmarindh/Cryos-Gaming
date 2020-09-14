@@ -62,9 +62,8 @@
           <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
         </div>
       </form>
-      <ul class="my-2 my-lg-0 navbar-nav d-flex flex-row
-      ">
-         <% if(locals.user.role == 9) {%>
+      <ul class="my-2 my-lg-0 navbar-nav d-flex flex-row">
+         <% if(user.rol == 9) {%>
          
          <li class="nav-item">
           <a class="nav-link" href="/administrar"><ion-icon name="folder-open"></ion-icon></a>
@@ -80,11 +79,11 @@
         </li> 
 
         <li class="nav-item">
-          <img src="/images/usuarios/<%=locals.user.avatar %>" 
+          <img src="/images/usuarios/<%= locals.user.avatar %>" 
         width='40' style= 'border-radius: 40px;'class="img-rounded" alt="">
         </li>
         
-      <% } else if (locals.user.role == 1){ %>
+      <% } else if (user.rol == 1){ %>
         <li class="nav-item">
           <a class="nav-link" href="/carrito"><i class="fas fa-shopping-cart"></i></a>
         </li>
