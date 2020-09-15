@@ -9,7 +9,7 @@ module.exports = {
     },
     create: (req, res) =>{
         let compus =  JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','listaProductos.json')));
-        res.render(path.resolve(__dirname, '..','views','admin','create'));
+        res.render(path.resolve(__dirname, '..','views','admin','create.ejs'));
     },
     save: (req,res)=>{
         let compus =  JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','listaProductos.json')));
@@ -47,7 +47,7 @@ module.exports = {
         const productFinal = compus.filter(compu => compu.id != productDeleteId);
         let productGuardar = JSON.stringify(productFinal,null,2);
         //Guardar o reemplazar nuestro archivo JSON
-        fs.writeFileSync(path.resolve(__dirname,'..','data','listaProductos.json'), productGuardar);
+        fs.writeFileSync(path.resolve(__dirname,'..','data','listaProductos.json'), {productGuardar});
         res.redirect('/administrar');
     },
     edit: (req,res) =>{
